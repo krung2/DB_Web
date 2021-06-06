@@ -1,4 +1,4 @@
-# db_web
+# DB_Web
 
 ## Project setup
 ```

@@ -1,6 +1,10 @@
 <template>
   <div id="app">
     <div class="nav" id="nav">
+      <div class="main-title">
+        DGSW
+        <div class="title-small">inside</div>
+      </div>
       <div class="nav-text">
         <router-link class="" to="/">홈</router-link> |
         <router-link class="" to="/write">글쓰기</router-link>

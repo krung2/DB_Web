@@ -10,4 +10,28 @@
   align-items: center;
 
   background-color: #333C83;
+
+
+  .main-title {
+
+    float: left;
+    margin-left: 30vh; 
+
+    font-size: 30px;
+
+    color:white;
+    font-weight: bold;
+
+    .title-small {
+      display: inline;
+      font-size: 15px;
+      font-weight: bold;
+    }
+    
+  }
+
+  .nav-text {
+    
+    margin-right: 50vh;
+  }
 }

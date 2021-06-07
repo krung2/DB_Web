@@ -1,6 +1,6 @@
 <template>
   <div class="profile-container">
-    <div class="login-button">로그인하기</div>
+    <div class="login-button">로그인</div>
   </div>
 </template>
 

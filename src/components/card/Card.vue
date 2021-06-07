@@ -1,14 +1,14 @@
 <template>
   <div class="container">
     <div class="text-container">
-      <div class="main-text">{{ data.title }}</div>
+      <div class="main-text">{{ post.title }}</div>
     </div>
 
     <div class="sub-text">
-      {{ data.name }} | {{ data.createdAt.slice(0, 10) }}
+      {{ post.name }} | {{ post.createdAt.slice(0, 10) }}
     </div>
     <div class="content-container">
-      {{ data.content }}
+      {{ post.content }}
     </div>
 
     <div></div>
@@ -18,7 +18,7 @@
 <script>
 export default {
   name: "Card",
-  props: ["data"],
+  props: ["post"],
 };
 </script>
 

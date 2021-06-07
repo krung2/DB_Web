@@ -2,8 +2,8 @@
   <div class="home">
     <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
     <div class="card-list">
-      <div v-for="data in datas" v-bind:key="data.idx">
-        <Card v-bind:data="data" />
+      <div v-for="post in posts" v-bind:key="post.idx">
+        <Card v-bind:post="post" />
       </div>
     </div>
 
@@ -28,12 +28,12 @@ export default {
     Profile,
   },
   computed: {
-    datas() {
-      return store.state.data;
+    posts() {
+      return store.state.posts;
     },
   },
   created: async () => {
-    await store.dispatch("getData");
+    await store.dispatch("getPosts");
   },
 };
 </script>

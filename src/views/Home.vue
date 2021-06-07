@@ -2,14 +2,9 @@
   <div class="home">
     <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
     <div class="card-list">
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
+      <div v-for="data in datas" v-bind:key="data.idx">
+        <Card v-bind:data="data" />
+      </div>
     </div>
 
     <div class="profile">
@@ -23,6 +18,7 @@
 // import HelloWorld from "@/components/HelloWorld.vue";
 import Card from "@/components/card/Card.vue";
 import Profile from "@/components/profile/Profile.vue";
+import store from "../store";
 
 export default {
   name: "Home",
@@ -30,6 +26,14 @@ export default {
     // HelloWorld,
     Card,
     Profile,
+  },
+  computed: {
+    datas() {
+      return store.state.data;
+    },
+  },
+  created: async () => {
+    await store.dispatch("getData");
   },
 };
 </script>

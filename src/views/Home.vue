@@ -8,7 +8,11 @@
     </div>
 
     <div class="profile">
-      <Profile />
+      <Profile
+        v-bind:message="'로그인'"
+        v-bind:isLogin="true"
+        v-bind:isFilter="true"
+      />
     </div>
   </div>
 </template>

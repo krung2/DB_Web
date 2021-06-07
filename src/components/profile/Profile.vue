@@ -1,5 +1,7 @@
 <template>
-  <div class="profile-container">a</div>
+  <div class="profile-container">
+    <div class="login-button">로그인하기</div>
+  </div>
 </template>
 
 <script>

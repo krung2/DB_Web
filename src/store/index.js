@@ -11,6 +11,7 @@ export default new Vuex.Store({
     title: null,
     content: null,
     check: false,
+    sort: false,
     token: window.localStorage.getItem('token'),
   },
   mutations: {
@@ -37,6 +38,19 @@ export default new Vuex.Store({
     },
     setCheck: (state) => {
       state.check = state.check ? false : true;
+    },
+    setSort: (state) => {
+      state.sort = state.sort ? false : true;
+
+      if (state.sort === true) {
+        state.posts.sort((a, b) => {
+          return b.likeCount - a.likeCount;
+        })
+      } else {
+        state.posts.sort((a, b) => {
+          return a.createdAt > b.createdAt ? -1 : a.createdAt < b.createdAt ? 1 : 0
+        })
+      }
     },
   },
   actions: {

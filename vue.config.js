@@ -1,4 +1,4 @@
 module.exports = {
 	outputDir: './docs',
-	publicPath: 'db_web'
+	publicPath: 'DB_Web'
 }

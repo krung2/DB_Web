@@ -1,4 +1,5 @@
 {
+  "homepage": "http://dinside.kro.kr",
   "name": "db_web",
   "version": "0.1.0",
   "private": true,
@@ -6,8 +7,8 @@
     "start": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "predeploy": "yarn build && cp CNAME build/CNAME",
-    "deploy": "gh-pages -d build"
+    "predeploy": "yarn build && cp CNAME docs/CNAME",
+    "deploy": "gh-pages -d docs"
   },
   "dependencies": {
     "address": "^1.1.2",

@@ -43,14 +43,19 @@ export default {
   },
   methods: {
     async addLike(idx) {
-      console.log(window.location.protocol);
-      await store.dispatch("addLike", idx);
+      try {
+        await store.dispatch("addLike", idx);
+      } catch (err) {
+        console.log(err);
+        alert("오류 발생");
+        return;
+      }
       this.post.isExistLike = false;
       this.post.likeCount++;
     },
     async alertLike() {
       alert("좋아요는 하루에 한번만 누를 수 있습니다");
-      window.location.reload;
+      window.location.reload();
     },
   },
 };

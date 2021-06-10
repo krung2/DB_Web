@@ -11,20 +11,21 @@ export default new Vuex.Store({
     title: null,
     content: null,
     check: false,
-    token: null,
+    token: window.localStorage.getItem('token'),
   },
   mutations: {
     getPosts: async (state) => {
-      state.posts = (await axios.get(`http://34.64.75.208:8004/post?token=${state.token}`)).data.data;
+      console.log(state.token)
+      state.posts = (await axios.get(`http://localhost:8004/post?token=${state.token}`)).data.data;
     },
     postPost: async (state) => {
-      await axios.post('http://34.64.75.208:8004/post', {
+      await axios.post('http://localhost:8004/post', {
         title: state.title,
         content: state.content,
       })
     },
     addLike: async (state, idx) => {
-      await axios.post(`http://10.80.160.201:8004/like/${idx}?token=${state.token}`);
+      await axios.post(`http://localhost:8004/like/${idx}?token=${state.token}`);
     },
     setTitle: async (state, text) => {
       state.title = text;

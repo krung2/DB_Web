@@ -12,6 +12,7 @@
         v-bind:message="'로그인'"
         v-bind:isLogin="true"
         v-bind:isFilter="true"
+        @clickFunc="alertDevelop"
       />
     </div>
   </div>
@@ -46,6 +47,11 @@ export default {
       localStorage.setItem("token", uuid());
       store.commit("setToken", localStorage.getItem("token"));
     }
+  },
+  methods: {
+    alertDevelop() {
+      alert("아직 개발중인 기능입니다 조금만 기다려주세요 :)");
+    },
   },
 };
 </script>

@@ -9,10 +9,10 @@
 
     <div class="profile">
       <Profile
-        v-bind:message="'로그인'"
+        v-bind:message="sort ? '좋아요순' : '최근순'"
         v-bind:isLogin="true"
         v-bind:isFilter="true"
-        @clickFunc="alertDevelop"
+        @clickFunc="changeSort"
       />
     </div>
   </div>
@@ -34,6 +34,9 @@ export default {
     Profile,
   },
   computed: {
+    sort() {
+      return store.state.sort;
+    },
     posts() {
       return store.state.posts;
     },
@@ -49,8 +52,8 @@ export default {
     }
   },
   methods: {
-    alertDevelop() {
-      alert("아직 개발중인 기능입니다 조금만 기다려주세요 :)");
+    changeSort() {
+      store.commit("setSort");
     },
   },
 };

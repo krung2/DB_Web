@@ -1,24 +1,9 @@
-# DB_Web
+## DInside 
 
-## Project setup
-```
-yarn install
-```
+<hr />
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+- 이 페이지는 대구소프트웨어고등학교 학생들을 위한 익명 게시판입니다
+- 새로운 기능이나 버그관련은 이슈 기능을 사용해주세요!
+- 많은 이용 부탁드립니당!!!
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+![스크린샷 2021-06-10 오후 12 19 40](https://user-images.githubusercontent.com/62950058/121459401-22e49980-c9e6-11eb-9565-b42839ffffe2.png)

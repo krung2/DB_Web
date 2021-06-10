@@ -23,6 +23,7 @@
 import Card from "@/components/card/Card.vue";
 import Profile from "@/components/profile/Profile.vue";
 import store from "../store";
+import { v4 as uuid } from "uuid";
 
 export default {
   name: "Home",
@@ -38,6 +39,13 @@ export default {
   },
   created: async () => {
     await store.dispatch("getPosts");
+
+    store.commit("setToken", localStorage.getItem("token"));
+
+    if (store.state.token === null) {
+      localStorage.setItem("token", uuid());
+      store.commit("setToken", localStorage.getItem("token"));
+    }
   },
 };
 </script>

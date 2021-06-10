@@ -43,6 +43,7 @@ export default {
   },
   methods: {
     async addLike(idx) {
+      console.log(window.location.protocol);
       await store.dispatch("addLike", idx);
       this.post.isExistLike = false;
       this.post.likeCount++;
